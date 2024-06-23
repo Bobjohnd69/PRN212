@@ -20,6 +20,11 @@ namespace Repository
             _dbSet = _context.Set<T>();
         }
 
+        public List<T> GetAll()
+        {
+           return _dbSet.ToList();
+            
+        }
         public void Add(T entity)
         {
             _dbSet.Add(entity);
