@@ -46,11 +46,26 @@ namespace FinalAssignment
             LoadData();
         }
 
+        private void myDataGrid_CellEditEnding(object sender, System.Windows.Controls.DataGridCellEditEndingEventArgs e)
+        {
+            if (e.EditAction == System.Windows.Controls.DataGridEditAction.Commit)
+            {
+                var staffMember = e.Row.Item as StaffMember;
+                if (staffMember != null)
+                {
+                    _staffMemberService.UpdateStaffMember(staffMember);
+                }
+            }
+        }
+
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (StaffDataGrid.SelectedItem is StaffMember selectedStaffMember)
+            var button = sender as Button;
+            var staffMember = button.DataContext as StaffMember;
+
+            if (staffMember != null)
             {
-                _staffMemberService.UpdateStaffMember(selectedStaffMember);
+                _staffMemberService.UpdateStaffMember(staffMember);
                 LoadData();
             }
         }

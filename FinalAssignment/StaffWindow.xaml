@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="StaffWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="StaffDataGrid" Margin="10,144,-10,0" AutoGenerateColumns="False" CanUserAddRows="False">
+        <DataGrid x:Name="StaffDataGrid" Margin="10,144,-10,0" AutoGenerateColumns="False" CellEditEnding="myDataGrid_CellEditEnding" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="MemberID" Header="MemberID" Binding="{Binding MemberId}" IsReadOnly="True"/>
-                <DataGridTextColumn x:Name="Password" Header="Password" Binding="{Binding Password}" Width="50" IsReadOnly="False"/>
-                <DataGridTextColumn x:Name="Fullname" Header="Fullname" Binding="{Binding FullName}" IsReadOnly="False"/>
-                <DataGridTextColumn x:Name="EmailAddress" Header="EmailAddress" Binding="{Binding EmailAddress}" IsReadOnly="False"/>
-                <DataGridTextColumn x:Name="Role" Header="Role" Binding="{Binding Role}" IsReadOnly="False"/>
+                <DataGridTextColumn x:Name="Password" Header="Password" Binding="{Binding Password, UpdateSourceTrigger=PropertyChanged}" Width="50" IsReadOnly="False"/>
+                <DataGridTextColumn x:Name="Fullname" Header="Fullname" Binding="{Binding FullName, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                <DataGridTextColumn x:Name="EmailAddress" Header="EmailAddress" Binding="{Binding EmailAddress, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                <DataGridTextColumn x:Name="Role" Header="Role" Binding="{Binding Role}" IsReadOnly="True"/>
 
 
                 <DataGridTemplateColumn Header="Edit">
