@@ -31,12 +31,7 @@ namespace FinalAssignment
             AC.Show();
         }
 
-        private void EditBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DelBtn_Click(object sender, RoutedEventArgs e)
+        private void Supplier_Click(object sender, RoutedEventArgs e)
         {
 
         }
