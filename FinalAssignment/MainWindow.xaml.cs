@@ -23,6 +23,8 @@ namespace FinalAssignment
 
         private void StaffButton_Click(object sender, RoutedEventArgs e)
         {
+            StaffWindow staffWindow = new StaffWindow();
+            staffWindow.Show();
         }
 
         private void ACButton_Click(object sender, RoutedEventArgs e)
