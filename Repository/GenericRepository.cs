@@ -25,6 +25,7 @@ namespace Repository
            return _dbSet.ToList();
             
         }
+
         public void Add(T entity)
         {
             _dbSet.Add(entity);
@@ -39,7 +40,7 @@ namespace Repository
 
         public void Delete(T entity)
         {
-            _dbSet?.Remove(entity);
+            _dbSet.Remove(entity);
             _context.SaveChanges();
         }
     }

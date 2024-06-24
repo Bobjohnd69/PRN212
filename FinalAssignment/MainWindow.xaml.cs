@@ -20,5 +20,20 @@ namespace FinalAssignment
         {
             InitializeComponent();
         }
+
+        private void StaffButton_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void ACButton_Click(object sender, RoutedEventArgs e)
+        {
+            var AC = new AirConditionerForm();
+            AC.Show();
+        }
+
+        private void Supplier_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
