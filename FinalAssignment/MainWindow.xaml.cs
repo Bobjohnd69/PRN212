@@ -20,5 +20,11 @@ namespace FinalAssignment
         {
             InitializeComponent();
         }
+
+        private void StaffButton_Click(object sender, RoutedEventArgs e)
+        {
+            StaffWindow staffWindow = new StaffWindow();
+            staffWindow.Show();
+        }
     }
 }
