@@ -26,5 +26,16 @@ namespace FinalAssignment
             StaffWindow staffWindow = new StaffWindow();
             staffWindow.Show();
         }
+
+        private void ACButton_Click(object sender, RoutedEventArgs e)
+        {
+            var AC = new AirConditionerForm();
+            AC.Show();
+        }
+
+        private void Supplier_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

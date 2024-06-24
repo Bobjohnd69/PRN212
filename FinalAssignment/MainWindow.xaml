@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="StaffButton" Content="Staff Window" HorizontalAlignment="Left" Margin="40,57,0,0" VerticalAlignment="Top" Height="80" Width="101" Click="StaffButton_Click"/>
+        <TextBlock x:Name="welcome" TextWrapping="Wrap" Text="AC Management System" Margin="42,29,42,325" FontSize="36" FontWeight="Bold" TextAlignment="Center"/>
+        <Button x:Name="StaffButton" Content="Staff" Margin="176,135,518,217" Click="StaffButton_Click"/>
+        <Button x:Name="SupplierButton" Content="Supplier" Margin="512,135,182,217" Click="Supplier_Click"/>
+        <Button x:Name="ACButton" Content="AC" Margin="348,135,348,217" Click="ACButton_Click"/>
+
     </Grid>
 </Window>
