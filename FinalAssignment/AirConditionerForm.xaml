@@ -5,8 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalAssignment"
         mc:Ignorable="d"
-        Title="AirConditionerForm" Height="450" Width="800">
+        Title="AirConditionerForm" Height="450" Width="1400
+">
     <Grid>
-        
+
+        <DataGrid x:Name="AirConditionerDataGrid" Margin="327,10,10,10" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="AirConditionerId" Header="Id" Binding="{Binding AirConditionerId}" IsReadOnly="True"/>
+                <DataGridTextColumn x:Name="AirConditionerName" Header="Name" Binding="{Binding AirConditionerName}"/>
+                <DataGridTextColumn x:Name="Warranty" Header="Warranty" Binding="{Binding Warranty}"/>
+                <DataGridTextColumn x:Name="SoundPressureLevel" Header="Sound Pressure Level" Binding="{Binding SoundPressureLevel}"/>
+                <DataGridTextColumn x:Name="FeatureFunction" Header="Feature Function" Binding="{Binding FeatureFunction}"/>
+                <DataGridTextColumn x:Name="Quantity" Header="Quantity" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn x:Name="DollarPrice" Header="Dollar Price" Binding="{Binding DollarPrice}"/>
+                <DataGridTextColumn x:Name="SupplierId" Header="Supplier Id" Binding="{Binding SupplierId}"/>
+
+
+                <DataGridTemplateColumn Header="Edit">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="EditBtn" Content="Edit" Click="EditBtn_Click" Tag="{Binding AirConditionerId}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Delete">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="DelBtn" Content="Delete" Click="DelBtn_Click" Tag="{Binding AirConditionerId}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox x:Name="SupplierComboBox" 
+                  DisplayMemberPath="SupplierName"
+                  SelectedValuePath="SupplierId"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="176,246,0,0"/>
+        <TextBox x:Name="name" TextWrapping="Wrap" Width="120" Margin="18,95,1262,314"/>
+        <TextBox x:Name="spf" TextWrapping="Wrap" Width="120" Margin="16,142,1264,267"/>
+        <TextBox x:Name="ff" TextWrapping="Wrap" Margin="18,189,1102,220"/>
+        <TextBox x:Name="quantity" TextWrapping="Wrap" Width="120" Margin="176,142,1104,267"/>
+        <TextBox x:Name="dollarPrice" TextWrapping="Wrap" Width="120" Margin="16,241,1264,168"/>
+        <TextBox x:Name="warrant" TextWrapping="Wrap" Width="120" Margin="176,95,1104,314"/>
+        <Button Content="Add" Margin="86,291,1184,76" Click="Add_Click"/>
+        <TextBlock TextWrapping="Wrap" Text="Name" Margin="18,66,1338,346"/>
+        <TextBlock TextWrapping="Wrap" Text="Warrant" Margin="176,66,1180,346"/>
+        <TextBlock TextWrapping="Wrap" Text="SPF" Margin="18,120,1338,292"/>
+        <TextBlock TextWrapping="Wrap" Text="Quantity" Margin="176,118,1164,294"/>
+        <TextBlock TextWrapping="Wrap" Text="Feature Function" Margin="18,167,1247,245"/>
+        <TextBlock TextWrapping="Wrap" Text="Dollar Price" Margin="18,219,1247,193"/>
+        <TextBlock TextWrapping="Wrap" Text="SupplierID" Margin="176,217,1089,195"/>
+        <TextBlock TextWrapping="Wrap" Text="Add New Air Conditioner" Margin="34,25,1132,368" TextAlignment="Center"/>
     </Grid>
 </Window>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Repository
 {
     public class GenericRepository<T> where T : class
-    
+
     {
         AirConditionerShop2023DbContext _context;
         DbSet<T> _dbSet;
@@ -22,25 +22,15 @@ namespace Repository
 
         public List<T> GetAll()
         {
-           return _dbSet.ToList();
-            
+            return _dbSet.ToList();
+
         }
+
         public void Add(T entity)
         {
             _dbSet.Add(entity);
             _context.SaveChanges();
         }
-        public void Update(T entity)
-        {
-            var tracker = _context.Attach(entity);
-            tracker.State = EntityState.Modified;
-            _context.SaveChanges();
-        }
 
-        public void Delete(T entity)
-        {
-            _dbSet?.Remove(entity);
-            _context.SaveChanges();
-        }
     }
 }
