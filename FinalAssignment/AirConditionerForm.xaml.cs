@@ -24,7 +24,6 @@ namespace FinalAssignment
     {
         AirConditionerService airConditionerService;
         SupplierCompanyService supplierCompanyService;
-        AirConditioner AirConditioner { get; set; }
         public AirConditionerForm()
         {
             InitializeComponent();
@@ -41,15 +40,6 @@ namespace FinalAssignment
             SupplierComboBox.ItemsSource = listSupplier;
             SupplierComboBox.DisplayMemberPath = "SupplierName";
             SupplierComboBox.SelectedValuePath = "SupplierId";
-        }
-
-        private void EditBtn_Click(object sender, RoutedEventArgs e)
-        {
-            var button = sender as Button;
-            var airConditonerId = (int)button.Tag;
-            AirConditioner airConditioner = airConditionerService.GetAirConditioner(airConditonerId);
-            airConditionerService.UpdateAirConditioner(airConditioner);
-            Load();
         }
 
         private void DelBtn_Click(object sender, RoutedEventArgs e)
@@ -111,6 +101,18 @@ namespace FinalAssignment
             quantity.Text = string.Empty;
             dollarPrice.Text = string.Empty;
             SupplierComboBox.SelectedIndex = 0;
+        }
+
+        private void AirConditionerDataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            if (e.EditAction == System.Windows.Controls.DataGridEditAction.Commit)
+            {
+                var editedAC = e.Row.Item as AirConditioner;
+                if (editedAC != null)
+                {
+                    airConditionerService.UpdateAirConditioner(editedAC);
+                }
+            }
         }
     }
 }
