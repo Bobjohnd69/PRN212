@@ -35,7 +35,8 @@ namespace FinalAssignment
 
         private void Supplier_Click(object sender, RoutedEventArgs e)
         {
-
+            var Supplier = new SupplierCompanyForm();
+            Supplier.Show();
         }
     }
 }
