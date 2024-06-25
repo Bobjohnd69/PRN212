@@ -5,11 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalAssignment"
         mc:Ignorable="d"
-        Title="AirConditionerForm" Height="450" Width="1400
-">
+        Title="AirConditionerForm" Height="450" Width="1400">
     <Grid>
-
-        <DataGrid x:Name="AirConditionerDataGrid" Margin="327,10,10,10" AutoGenerateColumns="False" CanUserAddRows="False" CellEditEnding="AirConditionerDataGrid_CellEditEnding" >
+        <DataGrid x:Name="AirConditionerDataGrid" Margin="327,10,10,10" AutoGenerateColumns="False" CanUserAddRows="False" CellEditEnding="AirConditionerDataGrid_CellEditEnding">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="AirConditionerId" Header="Id" Binding="{Binding AirConditionerId}" IsReadOnly="True"/>
                 <DataGridTextColumn x:Name="AirConditionerName" Header="Name" Binding="{Binding AirConditionerName, UpdateSourceTrigger=PropertyChanged}"/>
@@ -19,8 +17,6 @@
                 <DataGridTextColumn x:Name="Quantity" Header="Quantity" Binding="{Binding Quantity, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTextColumn x:Name="DollarPrice" Header="Dollar Price" Binding="{Binding DollarPrice, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridTextColumn x:Name="SupplierId" Header="Supplier Id" Binding="{Binding SupplierId}" IsReadOnly="True"/>
-
-
                 <DataGridTemplateColumn Header="Delete">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -30,168 +26,21 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <ComboBox x:Name="SupplierComboBox" 
-                  DisplayMemberPath="SupplierName"
-                  SelectedValuePath="SupplierId"
-                  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="176,246,0,0" RenderTransformOrigin="0.5,0.5">
-            <ComboBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="-0.933" Y="1.018"/>
-                </TransformGroup>
-            </ComboBox.RenderTransform>
-        </ComboBox>
-        <TextBox x:Name="name" TextWrapping="Wrap" Width="120" Margin="18,95,1262,314" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.196" Y="-1.2"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="spf" TextWrapping="Wrap" Width="120" Margin="16,142,1264,267" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="0.532" Y="-1.233"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="ff" TextWrapping="Wrap" Margin="18,189,1102,220" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="-0.141" Y="-0.079"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="quantity" TextWrapping="Wrap" Width="120" Margin="176,142,1104,267" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="0.516" Y="1.029"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="dollarPrice" TextWrapping="Wrap" Width="120" Margin="16,241,1264,168" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="-0.868" Y="-1.243"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="warrant" TextWrapping="Wrap" Width="120" Margin="176,95,1104,314" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.18" Y="1.033"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <Button Content="Add" Margin="86,291,1184,76" Click="Add_Click" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="-1.879" Y="-0.19"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <TextBlock TextWrapping="Wrap" Text="Name" Margin="18,66,1338,346" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.631" Y="-1.734"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="Warrant" Margin="176,66,1180,346" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.615" Y="0.499"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="SPF" Margin="18,120,1338,292" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="0.868" Y="-1.74"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="Quantity" Margin="176,118,1164,294" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="0.879" Y="0.607"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="Feature Function" Margin="18,167,1247,245" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="0.199" Y="-1.101"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="Dollar Price" Margin="18,219,1247,193" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="-0.536" Y="-1.107"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="SupplierID" Margin="176,217,1089,195" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="-0.524" Y="1.127"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="Add New Air Conditioner" Margin="34,25,1132,368" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="2.065" Y="-0.162"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
+        <ComboBox x:Name="SupplierComboBox" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierId" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="176,246,0,0"/>
+        <TextBox x:Name="name" TextWrapping="Wrap" Width="120" Margin="18,95,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="spf" TextWrapping="Wrap" Width="120" Margin="18,142,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="ff" TextWrapping="Wrap" Width="120" Margin="18,189,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="quantity" TextWrapping="Wrap" Width="120" Margin="176,142,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="dollarPrice" TextWrapping="Wrap" Width="120" Margin="18,241,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="warrant" TextWrapping="Wrap" Width="120" Margin="176,95,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Content="Add" Margin="38,289,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Add_Click" Height="46" Width="80"/>
+        <TextBlock Text="Name" Margin="18,66,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="Warrant" Margin="176,66,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="SPF" Margin="18,120,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="Quantity" Margin="176,118,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="Feature Function" Margin="18,167,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="Dollar Price" Margin="18,219,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="SupplierID" Margin="176,217,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="Add New Air Conditioner" Margin="34,25,0,0" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Grid>
 </Window>

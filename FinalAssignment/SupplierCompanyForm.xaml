@@ -6,17 +6,8 @@
         xmlns:local="clr-namespace:FinalAssignment"
         mc:Ignorable="d"
         Title="SupplierCompanyForm" Height="450" Width="800">
-    <Grid RenderTransformOrigin="0.5,0.5">
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="-0.128"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Grid.RenderTransform>
-
-        <DataGrid x:Name="SupplierCompanyDataGrid" Margin="327,10,10,10" AutoGenerateColumns="False" CanUserAddRows="False" CellEditEnding="SupplierCompanyDataGrid_CellEditEnding" >
+    <Grid>
+        <DataGrid x:Name="SupplierCompanyDataGrid" Margin="327,10,10,10" AutoGenerateColumns="False" CanUserAddRows="False" CellEditEnding="SupplierCompanyDataGrid_CellEditEnding">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="SupplierId" Header="Id" Binding="{Binding SupplierId}" IsReadOnly="True"/>
                 <DataGridTextColumn x:Name="SupplierName" Header="Name" Binding="{Binding SupplierName, UpdateSourceTrigger=PropertyChanged}"/>
@@ -31,105 +22,15 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="supplierID" TextWrapping="Wrap" Width="120" Margin="18,95,662,314" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.196" Y="-1.2"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="description" TextWrapping="Wrap" Margin="16,220,504,189" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="-0.141" Y="-0.079"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="poo" TextWrapping="Wrap" Width="120" Margin="176,165,504,244" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.18" Y="1.033"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <Button Content="Add" Margin="87,261,583,106" Click="Add_Click" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="-1.879" Y="-0.19"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <TextBlock TextWrapping="Wrap" Text="SupplierID" Margin="18,66,707,346" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.631" Y="-1.734"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="Place of Origin" Margin="176,136,532,276" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.615" Y="0.499"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="Description" Margin="16,198,649,214" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="0.199" Y="-1.101"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock TextWrapping="Wrap" Text="Add New Supplier" Margin="34,25,532,368" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="2.065" Y="-0.162"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBox x:Name="name" TextWrapping="Wrap" Width="120" Margin="24,164,656,245" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.18" Y="1.033"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBlock TextWrapping="Wrap" Text="Name" Margin="24,135,684,277" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.81"/>
-                    <TranslateTransform X="1.615" Y="0.499"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
+        <TextBox x:Name="supplierID" TextWrapping="Wrap" Width="120" Margin="18,95,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="description" TextWrapping="Wrap" Margin="18,220,0,0" Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="poo" TextWrapping="Wrap" Width="120" Margin="176,165,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button Content="Add" Margin="24,261,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Add_Click" Height="61" Width="89"/>
+        <TextBlock TextWrapping="Wrap" Text="SupplierID" Margin="18,66,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Place of Origin" Margin="176,136,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Description" Margin="18,198,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Add New Supplier" Margin="34,25,0,0" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="name" TextWrapping="Wrap" Width="120" Margin="24,164,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Name" Margin="24,135,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Grid>
 </Window>
